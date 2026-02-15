@@ -115,9 +115,9 @@ class BinanceTrader:
             
             # Get quantity precision
             quantity_precision = 0
-            for filter in symbol_info['filters']:
-                if filter['filterType'] == 'LOT_SIZE':
-                    step_size = float(filter['stepSize'])
+            for symbol_filter in symbol_info['filters']:
+                if symbol_filter['filterType'] == 'LOT_SIZE':
+                    step_size = float(symbol_filter['stepSize'])
                     # Calculate precision from step size
                     quantity_precision = len(str(step_size).rstrip('0').split('.')[-1])
                     break

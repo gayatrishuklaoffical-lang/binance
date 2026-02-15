@@ -67,7 +67,7 @@ class SignalParser:
                 'symbol': symbol,
                 'entry': float(entry_match.group(1)),
                 'tp': float(tp_match.group(1)),
-                'sl': float(sl_match.group(1)) if sl_match else None,  # Parse SL but won't use it
+                'sl': float(sl_match.group(1)) if sl_match else None,  # Parse SL but will not use it
                 'leverage': int(leverage_match.group(1)),
                 'margin': float(margin_match.group(1)),
             }
